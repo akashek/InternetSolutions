@@ -1,0 +1,86 @@
+/* Move game board and buttons closer to the heading */
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align to top instead of center */
+  justify-content: center;
+  margin-top: 0px; /* Reduce space between title and board */
+}
+
+/* Styling for the board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 5px;
+}
+
+/* Style each square */
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Status message styling */
+.status {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Styling for game history */
+.game-info {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Styling for move history buttons */
+.game-info button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 3px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s ease;
+}
+
+.game-info button:hover {
+  background-color: #ddd;
+}
+
+/* Styling for the heading */
+.title {
+  text-align: center;
+  font-size: 18px;  
+  font-weight: bold;
+  margin-bottom: 20px; 
+  margin-top: 10px;  
+}
+/* Set a soothing background color */
+body {
+  background-color: #f3f8ff; /* Light pastel blue */
+  color: #333; /* Darker text for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect for squares */
+.square:hover {
+  background-color: #e0ebff; /* Light blue hover effect */
+}
+
+.game-info button:hover {
+  background-color: #d1d1d1;
+}
