@@ -1,0 +1,871 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+}
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed; /* Fixes navbar at the top */
+    top: 0; /* Aligns navbar to the top */
+    left: 0;
+    width: 100%; /* Makes navbar full width */
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* ✅ Adjust this value to increase spacing */
+}
+
+.navbar-nav .nav-link {
+    color: #FFC107 !important;  /* ✅ Change text color to Cobra Kai Gold */
+    font-family: 'Bangers', sans-serif; /* ✅ Use Cobra Kai Theme Font */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+    gap: 135px; /* ✅ Spreads menu items */
+    padding: 0 75px; /* ✅ Adds spacing on both sides */
+    
+}
+
+.logo {
+    width: 200px;  /* ✅ Adjust size */
+    height: auto;
+}
+
+
+.header {
+    position: relative; /* ✅ Required to position the overlay properly */
+    background-image: url('../Images/cobra_kai_game_4k_hd_cobra.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    height: 100vh;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* ✅ Dark overlay */
+}
+
+.header-text {
+    position: relative; /* ✅ Ensures text appears above the overlay */
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.description {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* ✅ Centers the text */
+    text-align: center;
+    width: 80%; /* ✅ Prevents text from stretching too wide */
+}
+
+.description h1 {
+    color: #c9a227; /* ✅ Adjusted to match your new navbar color */
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.description p {
+    color: #ffffff; /* ✅ White text for contrast */
+    font-size: 1.3rem;
+    line-height: 1.5;
+    max-width: 700px; /* ✅ Prevents text from getting too wide */
+    margin: 0 auto; /* ✅ Centers text */
+}
+.description button {
+    border: 3px solid #FFC107; /* ✅ Golden border */
+    background: #D32F2F; /* ✅ Fiery Red background */
+    color: #000000; /* ✅ Black text */
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px; /* ✅ Slightly rounded for modern feel */
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* ✅ Adds depth */
+}
+
+.description button:hover {
+    border: 3px solid #D32F2F; /* ✅ Fiery Red border */
+    background: #FFC107; /* ✅ Golden background */
+    color: #000; /* ✅ Black text for contrast */
+    transform: scale(1.1); /* ✅ Slight zoom effect */
+    box-shadow: 0px 6px 14px rgba(255, 193, 7, 0.6); /* ✅ Stronger glow effect */
+}
+
+/* Ensure All Sections Spread Equally in a Row */
+.features {
+    display: flex;
+    justify-content: space-evenly; /* ✅ Ensures equal spacing */
+    align-items: flex-start; /* ✅ Keeps everything aligned at the top */
+    gap: 20px; /* ✅ Adds spacing between elements */
+    flex-wrap: wrap; /* ✅ Responsive on smaller screens */
+    width: 100%;
+}
+
+/* Ensure Each Dojo Box Has Same Size */
+.dojo-box {
+    width: 320px; /* ✅ Equal width */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Titles: Black & Bold */
+.feature-title {
+    font-family: 'Bangers', sans-serif;
+    color: #000000; /* ✅ Black text */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Text: Black & Bold */
+.features p {
+    font-family: 'Montserrat', sans-serif;
+    color: #000000; /* ✅ Black text */
+    font-size: 1.1rem;
+    font-weight: bold; /* ✅ Makes text stand out */
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/* Adjust Image Size for Uniformity */
+.features img {
+    width: 160px; /* ✅ Keeps images same size */
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* Ensure Three Dojo Sections + Contact Form Align in One Row */
+.features .row {
+    display: flex;
+    justify-content: center; /* ✅ Centers all elements */
+    align-items: flex-start; /* ✅ Keeps everything aligned at the top */
+    gap: 30px; /* ✅ Adds spacing between elements */
+    flex-wrap: wrap; /* ✅ Ensures proper stacking on small screens */
+}
+
+/* Make Each Section Take Up Equal Space */
+.dojo-box,
+.contact-section {
+    flex: 1; /* ✅ Makes sure all sections are the same width */
+    max-width: 300px; /* ✅ Ensures equal max width */
+    padding: 45px;
+    text-align: center;
+}
+
+/* Titles: Black & Bold */
+.feature-title {
+    font-family: 'Bangers', sans-serif;
+    color: #000000; /* ✅ Black text */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+
+/* Ensure Contact Form Matches Other Sections */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* ✅ Keeps form elements spaced */
+    width: 100%;
+}
+
+/* Keep Button Style Consistent */
+.contact-section .btn {
+    background-color: #D32F2F; /* ✅ Fiery Red */
+    border: 2px solid #D32F2F;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%; /* ✅ Makes button match input width */
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+/* Button Styling */
+.contact-section .btn {
+    width: 100%;
+    padding: 12px;
+}
+
+/* Button Hover Effect */
+.contact-section .btn:hover {
+    background-color: #FFC107; /* ✅ Golden Yellow */
+    border: 2px solid #FFC107;
+    color: #000; /* ✅ Black text on hover */
+}
+
+/* Ensure Inputs Take Up Full Width */
+.contact-section .form-control {
+    width: 100%; /* ✅ Makes inputs full-width */
+    padding: 12px;
+    font-size: 1rem;
+}
+
+
+/* Team Section Background */
+.background {
+    background-color: #000; /* ✅ Black background */
+    padding: 50px 0;
+}
+
+/* Team Title */
+.team-title {
+    font-family: 'Bangers', sans-serif;
+    color: #FFC107; /* ✅ Golden yellow */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Team Row */
+.team .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* ✅ Ensures equal spacing */
+}
+
+/* Team Member Cards */
+.team .card {
+    background: #1e1e1e; /* ✅ Dark gray for contrast */
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 15px;
+    max-width: 250px; /* ✅ Keeps cards uniform */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.team .card:hover {
+    transform: scale(1.05);
+}
+
+/* Profile Images */
+.card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* Card Body */
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Card Titles */
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFC107; /* ✅ Golden yellow */
+    text-transform: uppercase;
+}
+
+/* Card Text */
+.card-text {
+    font-size: 1rem;
+    color: #ddd; /* ✅ Light gray for readability */
+}
+
+
+/* Footer Background */
+.page-footer {
+    background-color: #0D0D0D; /* ✅ Deep Black */
+    color: #ffffff;
+    padding: 60px 0 30px;
+}
+
+/* Footer Headings */
+.page-footer h6 {
+    font-family: 'Bangers', sans-serif;
+    color: #FFC107; /* ✅ Cobra Kai Gold */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px; /* ✅ Adds a bit of spacing for boldness */
+}
+
+/* Footer Text */
+.page-footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #ddd; /* ✅ Light Gray for readability */
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+/* Footer Links */
+.page-footer a {
+    color: #FFC107; /* ✅ Cobra Kai Gold Links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-footer a:hover {
+    color: #ffffff; /* ✅ White on Hover */
+    text-decoration: underline;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    color: #FFC107;
+    font-size: 0.9rem;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #000; /* ✅ Pure Black */
+}
+
+/* Footer Grid Layout */
+.page-footer .container .row {
+    display: flex;
+    justify-content: space-between; /* ✅ Ensures even spacing */
+    align-items: flex-start;
+    flex-wrap: wrap; /* ✅ Responsive layout */
+}
+
+/* Increase width for 'Contact Us' section */
+.page-footer .col-lg-4 {
+    flex: 0 0 45%; /* ✅ Expands to take 45% of space */
+    max-width: 45%; /* ✅ Ensures it doesn't shrink too much */
+}
+
+/* Adjust width of 'About Cobra Kai' for balance */
+.page-footer .col-lg-8 {
+    flex: 0 0 50%; /* ✅ Keeps about section wider */
+    max-width: 50%;
+}
+
+/* Footer Text Alignment */
+.page-footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd; /* ✅ Light gray for readability */
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+    .page-footer .col-lg-4, .page-footer .col-lg-8 {
+        flex: 0 0 100%; /* ✅ Stacks them on smaller screens */
+        max-width: 100%;
+    }
+}
+
+
+/* Mobile Adjustments (Max Width 575px - Phones) */
+@media (max-width: 575.98px) {
+    /* Adjust the Header Section */
+    .description {
+        left: 0;
+        padding: 0 15px;
+        position: absolute;
+        top: 15%;
+        transform: none;
+        text-align: center;
+    }
+
+    .description h1 {
+        font-size: 1.8rem; /* ✅ Slightly smaller */
+    }
+
+    .description p {
+        font-size: 1.1rem; /* ✅ Improve readability */
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Ensure Dojos Stack Properly */
+    .dojo-box {
+        max-width: 90%; /* ✅ Make it fit better */
+    }
+
+    .contact-section {
+        background: linear-gradient(135deg, #8B0000, #2c0909); /* Cobra Kai dark red gradient */
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Ensure full-screen height */
+        text-align: center;
+    }
+    
+
+    /* Make Contact Inputs Larger */
+    .contact-section .form-control {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Resize Footer Sections */
+    .page-footer .col-lg-4,
+    .page-footer .col-lg-8 {
+        flex: 0 0 100%; /* ✅ Make footer sections stack */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Resize Footer Text */
+    .page-footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet Adjustments (Max Width 768px) */
+@media (max-width: 768px) {
+    .features .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dojo-box,
+    .contact-section {
+        flex: 0 0 100%; /* ✅ Full width on tablets */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Reduce Contact Form Padding */
+    .contact-section form {
+        padding: 15px;
+    }
+}
+
+/* Smaller Laptops (Max Width 1024px) */
+@media (max-width: 1024px) {
+    .description h1 {
+        font-size: 2rem;
+    }
+
+    .description p {
+        font-size: 1.2rem;
+    }
+
+    .contact-section {
+        max-width: 75%;
+    }
+}
+
+
+.about-section {
+    background: linear-gradient(135deg, #2c0909, #740000); /* Dark Red Gradient */
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+
+.about-section h1 {
+    font-family: 'Bangers', sans-serif;
+    color: #FFC107;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.about-section p {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+
+/* Modal Container */
+#demo-modal .modal-content {
+    border-radius: 0;
+    padding: 2rem;
+    background-color: #000; /* Cobra Kai Black */
+    border: 2px solid #FFC107; /* Gold Border */
+}
+
+/* Modal Header */
+#demo-modal .modal-header {
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Modal Image */
+#demo-modal .modal-header img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Close Button */
+#demo-modal .close {
+    background: #c0c3c8;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 19px;
+    font-weight: normal;
+    height: 30px;
+    opacity: 0.5;
+    padding: 0;
+    position: absolute;
+    right: 26px;
+    text-align: center;
+    top: 26px;
+    width: 30px;
+}
+#demo-modal .close span {
+    position: relative;
+    top: -3px;
+}
+
+/* Modal Heading */
+#demo-modal h4 {
+    color: #FFC107; /* Cobra Kai Gold */
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Modal Paragraph */
+#demo-modal .modal-body p {
+    color: #ddd; /* Light Gray */
+    font-size: 1.2rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Input Field */
+#demo-modal .form-control {
+    min-height: 46px;
+    border: 2px solid #FFC107; /* Gold Border */
+    background-color: black;
+    color: white;
+}
+
+/* Button Styling */
+#demo-modal .btn {
+    background-color: #D32F2F; /* Fiery Red */
+    border: none;
+    color: white;
+    min-width: 150px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+#demo-modal .btn:hover,
+#demo-modal .btn:focus {
+    background-color: #FFC107; /* Golden Yellow */
+    color: #000; /* Black text */
+}
+
+
+.games-page {
+    background-color: #000; /* Pure black background */
+    color: #fff; /* Ensures text is white */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tic-Tac-Toe Game Styles */
+/* Move the entire game to the leftmost side */
+.game-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align everything to the left */
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px; /* Creates space below the navigation bar */
+    left: 80px; /* Moves it to the leftmost side */
+    padding: 20px;
+}
+
+/* Ensure the game and move history are in one row */
+.game {
+    display: flex;
+    flex-direction: row; /* Align game board and move history side by side */
+    align-items: flex-start;
+}
+
+/* Align move history and Restart button to the right of the game */
+.game-info {
+    margin-left: 50px; /* Space between game board and move history */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items properly */
+}
+
+/* Adjust move history buttons */
+.game-info button {
+    text-align: left;
+    width: 120px;
+    margin-left: 0;
+}
+
+
+/* Styling for the board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+/* Style each square */
+.square {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for squares */
+.square:hover {
+    background-color: #e0ebff;
+}
+
+/* Status message styling */
+.status {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Styling for game history */
+.game-info {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for move history buttons */
+.game-info button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 3px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    transition: background-color 0.2s ease;
+}
+
+.game-info button:hover {
+    background-color: #ddd;
+}
+
+/* Styling for the heading */
+.title {
+    text-align: center;
+    font-size: 24px;  
+    font-weight: bold;
+    margin-bottom: 20px; 
+    color: white; /* Ensuring text is visible on dark background */
+}
+
+/* Change the background color to a lighter shade */
+body.games-page {
+    background-color: #490202; /* Light Gray Background */
+    color: #f3f1f1; /* Darker text for contrast */
+}
+
+.contact-form-container {
+    position: relative;  /* Change from absolute */
+    margin: 50px auto;   /* Add margin to push it down */
+    background: #1e0e0e; 
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Increase input and textarea width and height */
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%; /* Full width */
+    height: 55px; /* Taller input fields */
+    font-size: 1.2rem; /* Increase font size */
+    padding: 12px; /* More padding */
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Increase textarea height */
+.contact-form-container textarea {
+    height: 150px; /* Bigger message box */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Increase button size */
+.contact-form-container .cobra-btn {
+    width: 100%;
+    height: 60px; /* Taller button */
+    font-size: 1.3rem; /* Bigger text */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Increase button width */
+.contact-form-container .button button {
+    width: 100%; /* Full width for button */
+}
+
+/* Form alignment */
+.contact-form-container h2 {
+    text-align: center;
+    font-family: 'Bangers', sans-serif;
+    color: #D32F2F; /* Cobra Kai Red */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style input and textarea */
+input,
+textarea {
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Style the submit button */
+.button button {
+    background-color: #D32F2F;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button button:hover {
+    background-color: #FFC107; /* Golden Yellow */
+    color: black;
+}
+
+/* Increase validation message size */
+.error-text, .error-message {
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color: red;
+    margin-top: 5px;
+}
+
+/* Optional: Add padding for spacing */
+.contact-form-container .error-text {
+    padding-left: 5px;
+}
+
+/* Highlight fields with errors more prominently */
+.error-border {
+    border: 3px solid red !important; /* Thicker border */
+}
+
+/* Highlight fields with errors */
+.error-border {
+    border: 2px solid red !important;
+}
+
+/* Cobra Kai Themed Submit Button */
+.cobra-btn {
+    background-color: #D32F2F;
+    color: white;
+    padding: 12px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.cobra-btn:hover {
+    background-color: #FFC107;
+    color: black;
+}
+
+/* Increase size of success message box */
+.success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 30px; /* Increased padding for a larger box */
+    border-radius: 12px; /* Slightly more rounded */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 500px; /* Increase width */
+    min-height: 150px; /* Increase height */
+    font-size: 1.4rem; /* Bigger text */
+}
+
+/* Adjust OK button size */
+.success-popup button {
+    background-color: #D32F2F;
+    color: white;
+    padding: 12px 20px; /* Increase button padding */
+    font-size: 1.2rem; /* Larger font */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 15px; /* Extra space above button */
+}
+
+/* Button hover effect */
+.success-popup button:hover {
+    background-color: #FFC107;
+    color: black;
+}
